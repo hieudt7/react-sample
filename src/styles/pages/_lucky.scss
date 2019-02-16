@@ -1,0 +1,299 @@
+.lucky-view {
+  position: relative;
+  height: 100vh;
+  .full-bg {
+    margin-top: -8rem;
+    @include device-1() {
+      margin: 0;
+    }
+  }
+  .left-box {
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    @include device-1() {
+      top: 5.5rem;
+    }
+    img {
+      width: 17rem;
+      animation-name: bouncing;
+      transform-origin: center bottom;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      animation-iteration-count: 10;
+      @include device-1() {
+        width: 18rem;
+      }
+    }
+    >span {
+      position: absolute;
+      font-weight: 700;
+      width: 25rem;
+      text-transform: uppercase;
+      font-size: 3rem;
+      color: #000000;
+      line-height: 3rem;
+      text-align: center;
+      left: 0;
+      padding-top: 3rem;
+    }
+  }
+  .character {
+    position: absolute;
+    width: 45rem;
+    bottom: 0;
+    right: 4.5rem;
+    @include device-1(){
+      width: 50rem;
+      bottom: 3.5rem;
+    }
+  }
+  .page-title {
+    position: absolute;
+    width: 85rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 9.5rem;
+    z-index: 2;
+    @include device-1() {
+      width: 90rem;
+    }
+  }
+  .target-gift {
+    position: absolute;
+    left: 0;
+    top: 20rem;
+    @include device-1() {
+      top: 25rem;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      width: 18.5rem;
+      list-style: none;
+      text-align: center;
+      @include device-1() {
+        width: 20rem;
+      }
+      li {
+        margin-bottom: 2rem;
+        a {
+          display: block;
+          pointer-events: none;
+          position: relative;
+          img{
+            filter: grayscale(1);
+          }
+          &.active{
+            pointer-events: auto;
+            img{
+              filter: none;
+            }
+            &.claimed{
+              pointer-events: none;
+              &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/claimed.png);
+                background-size: contain;
+                z-index: 99;
+              }
+            }
+          }
+        }
+        .limit-lucky-small {
+          color: #ffefcc;
+          text-transform: uppercase;
+          font-family: 'UTMFacebook';
+          font-size: 2.2rem;
+          background-color: #4c0c0c;
+          border: 1px solid #4c0c0c;
+          border-radius: 5px;
+          padding: 1rem 2rem;
+          display: inline-block;
+          @include device-1() {
+            line-height: 7.2rem;
+            padding: 0 2rem;
+          }
+          b {
+            font-weight: 300;
+            font-size: 4rem;
+            color: #fce221;
+            float: right;
+            transform: translate(0, -0.5rem);
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .group-action-btn {
+    width: 23.8rem;
+    height: 21.7rem;
+    background-image: url('/images/l_box.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 1.5rem;
+    top: 35vh;
+    text-align: center;
+    padding-top: 4rem;
+    z-index: 3;
+    @include device-1() {
+      width: 120px;
+      height: 109px;
+      padding-top: 17px;
+    }
+    .red-btn {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .main-action {
+    position: absolute;
+    bottom: 2rem;
+    right: 65rem;
+    text-align: center;
+    @include device-1() {
+      bottom: 3rem;
+      right: 62rem;
+    }
+    a {
+      display: block;
+      margin-bottom: 2rem;
+      img {
+        width: 27rem;
+      }
+    }
+    .limit-lucky {
+      color: #ffefcc;
+      text-transform: uppercase;
+      font-family: 'UTMFacebook';
+      font-size: 3.2rem;
+      background-color: #4c0c0c;
+      border: 1px solid #ff0000;
+      border-radius: 5px;
+      line-height: 6.2rem;
+      padding: 0 2rem;
+      @include device-1() {
+        line-height: 7.2rem;
+        padding: 0 4rem;
+      }
+      b {
+        font-weight: 300;
+        font-size: 6rem;
+        color: #fce221;
+        float: right;
+        transform: translate(0, -0.5rem);
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.send-lucky {
+  position: relative;
+  padding-left: 30rem;
+  @include device-1() {
+    padding-left: 180px;
+  }
+  .img-light {
+    position: absolute;
+    top: -65px;
+    left: -65px;
+    width: 35rem;
+    @include device-1() {
+      width: 180px;
+      top: -15px;
+      left: -15px;
+    }
+  }
+  .share-via-fb {
+    text-align: center;
+    margin-bottom: 3rem;
+    .img-title {
+      width: 47rem;
+    }
+    .des-gift {
+      color: #fff !important;
+      font-size: 1.8rem;
+      @include device-1() {
+        font-size: 16px;
+      }
+    }
+  }
+  .share-via-uid {
+    text-align: center;
+    .img-title {
+      width: 48rem;
+      margin-bottom: 3rem;
+    }
+    .group-action-send {
+      display: table;
+      width: 100%;
+      >div {
+        display: table-cell;
+        vertical-align: middle;
+        &:first-child {
+          padding-right: 1.5rem;
+          input {
+            height: 5.2rem;
+            background-color: #d10206;
+            border: 1px solid #d10206;
+            font-size: 2.4rem;
+            color: #ffefcc;
+            padding: 0 15px;
+            @include device-1() {
+              font-size: 16px;
+              height: 32px;
+              border-radius: 5px;
+            }
+          }
+        }
+        &:last-child {
+          a {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.red-btn {
+  display: inline-block;
+  width: 15.9rem;
+  height: 5.6rem;
+  background-image: url('/images/l_btn.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 2.2rem;
+  color: #ffefcc;
+  text-transform: uppercase;
+  font-family: 'UTMFacebook';
+  font-weight: 300;
+  text-align: center;
+  line-height: 5.6rem;
+  @include device-1() {
+    width: 97px;
+    height: 34px;
+    font-size: 14px;
+    line-height: 34px;
+  }
+  &.small-btn {
+    width: 10rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    @include device-1() {
+      width: 70px;
+      height: 25px;
+      font-size: 12px;
+      line-height: 25px;
+    }
+  }
+}

@@ -1,0 +1,347 @@
+.spin-view {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  .left-box {
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    @include device-1() {
+      top: 5.5rem;
+    }
+    img {
+      width: 17rem;
+      animation-name: bouncing;
+      transform-origin: center bottom;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      animation-iteration-count: 10;
+      @include device-1() {
+        width: 18rem;
+      }
+    }
+    >span {
+      position: absolute;
+      font-weight: 700;
+      width: 25rem;
+      text-transform: uppercase;
+      font-size: 3rem;
+      color: #000000;
+      line-height: 3rem;
+      text-align: center;
+      left: 0;
+      padding-top: 3rem;
+    }
+  }
+  .left-box-txt {
+    position: absolute;
+    left: 0;
+    top: 16rem;
+    @include device-1() {
+      top: 22rem;
+    }
+    img {
+      width: 25rem;
+    }
+    >span {
+      position: absolute;
+      font-weight: 700;
+      width: 25rem;
+      text-transform: uppercase;
+      font-size: 3rem;
+      color: #000000;
+      line-height: 3rem;
+      text-align: center;
+      left: 0;
+      padding-top: 3rem;
+      span{
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .right-box {
+    position: absolute;
+    right: 7rem;
+    top: 16rem;
+    @include device-1() {
+      top: 22rem;
+    }
+    >img {
+      width: 25rem;
+    }
+    >span {
+      position: absolute;
+      font-weight: 300;
+      width: 25rem;
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      color: #fff;
+      line-height: 3.4rem;
+      text-align: center;
+      left: 0;
+      padding-top: 2.5rem;
+      b {
+        font-weight: 700;
+        font-size: 4rem;
+      }
+      i {
+        img {
+          width: 4rem;
+          transform: translate(0, -1rem);
+        }
+      }
+    }
+    .btn_thele {
+      margin-left: 1.5rem;
+      img {
+        width: 8.5rem;
+      }
+    }
+  }
+  .gift-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation-delay: 200ms;
+    animation-duration: 1000ms;
+    img {
+      width: 40rem;
+      @include device-1() {
+        width: 50rem;
+      }
+    }
+  }
+  .list-user {
+    position: absolute;
+    bottom: 0;
+    right: 7rem;
+    @include device-1() {
+      right: 14rem;
+    }
+    img {
+      width: 18rem;
+      @include device-1() {
+        width: 22rem;
+      }
+    }
+  }
+  .spin-router {
+    position: relative;
+    width: 110rem;
+    margin: 0 auto;
+    text-align: center;
+    .main-router {
+      width: 83rem;
+      display: inline-block;
+      margin-top: 3rem;
+      margin-left: -17rem;
+    }
+    .wheel {
+      position: absolute;
+      bottom: 11rem;
+      left: 11rem;
+      svg {
+        width: 65rem;
+        g {
+          &.disable-gift {
+            image {
+              filter: grayscale(1);
+            }
+          }
+          .mask-text {
+            //  fill: #d6d6d6;
+            fill: #ffcf2d;
+            font-size: 28px;
+          }
+          .quantity {
+            font-size: 17px;
+            font-weight: 700;
+            fill: #f6d76f;
+            @include device-1() {
+              font-size: 19px;
+            }
+          }
+          &:nth-child(2n) {
+            .quantity {
+              fill: #000;
+            }
+          }
+        }
+      }
+    }
+    .group-router-btn {
+      position: absolute;
+      bottom: -5rem;
+      left: 28rem;
+      @include device-1() {
+        left: 22rem;
+        bottom: -7rem;
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        img {
+          width: 16rem;
+          @include device-1() {
+            width: 20rem;
+          }
+        }
+        span {
+          display: block;
+          position: absolute;
+          width: 11rem;
+          height: 7rem;
+          background-size: cover;
+          background-repeat: no-repeat;
+          color: #000;
+          font-weight: 700;
+          font-size: 3.8rem;
+          text-align: center;
+        }
+        &:first-child {
+          span {
+            margin-left: -10rem;
+            margin-top: -1rem;
+            background-image: url('/images/spin_count.png');
+          }
+        }
+        &:last-child {
+          span {
+            margin-right: -10rem;
+            right: 0;
+            margin-top: -1rem;
+            background-image: url('/images/spin_count_right.png');
+          }
+        }
+      }
+    }
+  }
+}
+
+.tbl-spin-top {
+  width: 50%;
+  float: left;
+  max-height: 50vh;
+  overflow: auto;
+  @include device-1() {
+    max-height: 71vh;
+    overflow: auto;
+  }
+  .title-1 {
+    width: 48.8rem;
+  }
+  .title-2 {
+    width: 57.7rem;
+  }
+  &.g-1 {
+    padding-right: 15rem;
+    @include device-1() {
+      padding-right: 10px;
+    }
+  }
+  &.g-2 {
+    padding-left: 15rem;
+    @include device-1() {
+      padding-left: 10px;
+    }
+  }
+}
+
+.spin-tbl {
+  width: 100%;
+  border: 2px solid #580206;
+  @include device-1() {
+    font-size: 14px;
+  }
+  thead {
+    tr {
+      background-color: #ffd060;
+      th {
+        border-right: 2px solid #580206;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000;
+        padding: 7px 10px;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      background-color: #af2026;
+      td {
+        border-right: 2px solid #580206;
+        padding: 7px 10px;
+        text-transform: uppercase;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+      &:nth-child(2n) {
+        background-color: #99161c;
+      }
+    }
+  }
+}
+
+.imgs_spin_arr {
+  position: absolute;
+  z-index: 9;
+  width: 7rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: -7rem;
+}
+
+.disable-click {
+  pointer-events: none;
+}
+
+.group-confirm-btn {
+  text-align: center;
+  a {
+    margin-right: 1.5rem;
+    @include device-1() {
+      margin-right: 15px;
+    }
+    img {
+      width: 16rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+      @include device-1() {
+        width: 100px;
+      }
+    }
+    &.cancel {
+      filter: grayscale(1);
+    }
+    &:hover {
+      img {
+        transform: scale(0.85);
+      }
+    }
+  }
+}
+
+.des-gift {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff !important;
+  @include device-1() {
+    font-size: 15px;
+    color: #fff;
+  }
+}
+
+.gif-img-spin {
+  text-align: center;
+  img {
+    display: inline-block;
+    width: 25rem;
+    @include device-1() {
+      width: 200px;
+    }
+  }
+}

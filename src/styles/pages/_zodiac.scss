@@ -1,0 +1,541 @@
+.zodiac-content {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  .progress-left {
+    display: table-cell;
+    width: 23rem;
+    padding-top: 2rem;
+    vertical-align: top;
+    @include device-1(){
+      width: 20rem;
+    }
+    .logo {
+      width: 17.8rem;
+      margin-bottom: 4rem;
+      animation-name: bouncing;
+      transform-origin: center bottom;
+      animation-duration: 2s;
+      animation-fill-mode: both;
+      animation-iteration-count: 10;
+    }
+    .progress-vertical {
+      position: relative;
+      width: 22rem;
+      height: 60rem;
+      @include device-1(){
+        width: 20rem;
+      }
+    }
+    .progress-outline {
+      width: 2rem;
+      height: 60rem;
+      position: relative;
+      background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/progress-bg.jpg');
+      border-radius: 30px;
+      .progress-line {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 2rem;
+        background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/progress-active-bg.jpg');
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        max-height: 100% !important;
+      }
+    }
+    .progress-target {
+      font-family: 'Roboto', sans-serif;
+      >a {
+        position: absolute;
+        display: block;
+        left: -2.2rem;
+        pointer-events: none;
+        .number {
+          width: 6rem;
+          height: 6rem;
+          padding-top: 1rem;
+          border-radius: 50%;
+          font-size: 2.8rem;
+          font-weight: 700;
+          color: #570003;
+          display: inline-block;
+          text-align: center;
+          background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/cirlce_1.png');
+          background-size: cover;
+          background-position: center;
+          margin-right: 4px;
+          transform: translate(0, -5rem);
+          float: left;
+          &.active {
+            color: #ffff63;
+            background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/cirlce_2.png');
+            &+.box{
+              filter: none !important;
+            }
+          }
+        }
+        .box {
+          width: 12rem;
+          display: inline-block;
+          vertical-align: middle;
+          transform: translate(0, -3rem);
+          float: right;
+          filter: grayscale(1);
+          span {
+            display: inline-block;
+            width: 9rem;
+            height: 9rem;
+            border: 2px solid #503629;
+            border-radius: 3px;
+            background-color: #24120e;
+            text-align: center;
+            position: relative;
+            padding: 0.4rem;
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              max-width: 100%;
+              max-height: 9rem;
+            }
+          }
+          p {
+            font-size: 1.6rem;
+            color: #fff;
+            line-height: 2.1rem;
+            margin: 0;
+            font-weight: 300;
+          }
+        }
+        &:nth-child(1) {
+          bottom: 0;
+        }
+        &:nth-child(2) {
+          bottom: 25%;
+        }
+        &:nth-child(3) {
+          bottom: 50%;
+        }
+        &:nth-child(4) {
+          bottom: 75%;
+        }
+        &.claimed{
+          pointer-events: none;
+          &.active{
+            pointer-events: none;
+          }
+          .box{
+            &::before{
+              content: "";
+              position: absolute;
+              top:0;
+              left:0;
+              width: 9rem;
+              height: 9rem;
+              background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/claimed.png');
+              background-size: contain;
+              z-index: 99;
+            }
+          }
+        }
+        &.active{
+          pointer-events: auto;
+        }
+      }
+    }
+    &.progress-right {
+      padding-right: 4rem;
+      padding-top: 16.9rem;
+      @include device-1(){
+        padding-right: 3rem;
+      }
+      @include clearfix();
+      .progress-outline {
+        float: right;
+      }
+      .progress-target {
+        >a {
+          left: auto;
+          right: -2.2rem;
+          .number {
+            margin-right: 0;
+            margin-left: 4px;
+            float: right;
+          }
+          .box {
+            text-align: right;
+            float: left;
+            p {
+              text-align: right;
+            }
+          }
+          &.claimed{
+            .box{
+              &::before{
+                right:0;
+                left: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .progress-name {
+      margin-top: 1.2rem;
+      .art {
+        margin-bottom: 1.2rem;
+        width: 2.3rem;
+      }
+      .box-name {
+        width: 7rem;
+        height: 7rem;
+        text-align: center;
+        font-weight: 700;
+        color: #fff;
+        border: 2px solid #503729;
+        border-radius: 3px;
+        margin-left: -2.5rem;
+        font-size: 2.8rem;
+        line-height: 6.5rem;
+      }
+      p {
+        width: 15rem;
+        margin-left: -6rem;
+        color: #fff;
+        font-size: 2.4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    .ppr-name {
+      text-align: center;
+      margin-right: -1.3rem;
+      float: right;
+      margin-top: 1.2rem;
+      p {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #fff;
+      }
+      .art {
+        width: 2.3rem;
+      }
+    }
+  }
+  .main-content {
+    display: table-cell;
+    padding-top: 14.5rem;
+    .top-menu {
+      padding: 0 6rem;
+      height: 12rem;
+      position: relative;
+      @include clearfix();
+      .group-label{
+        padding-left: 4rem;
+      }
+      .rule {
+        float: left;
+        padding-top: 2.4rem;
+        img {
+          width: 20rem;
+        }
+      }
+      .count {
+        float: right;
+        position: relative;
+        margin-top: 1.5rem;
+        span {
+          font-size: 6rem;
+          color: #fff;
+          font-weight: 500;
+          position: absolute;
+          left: 1.5rem;
+          top: -0.3rem;
+        }
+        img {
+          width: 22rem;
+        }
+      }
+    }
+  }
+  .zod-item {
+    padding-top: 4.5rem;
+    .row-gift {
+      margin-bottom: 2rem;
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        li {
+          display: inline-block;
+          margin: 0 0.9rem;
+          width: 21rem;
+          .box {
+            border: 2px solid transparent;
+            border-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/item_outline_1.png') 3 stretch;
+            img {
+              width: 100%;
+              max-width: none;
+            }
+            &.box-open {
+              border-image: none !important;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        ul {
+          li {
+            width: 22rem;
+            .box {
+              border-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/item_outline_2.png') 3 stretch;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        ul {
+          li {
+            width: 23rem;
+            .box {
+              border-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/item_outline_3.png') 3 stretch;
+            }
+            &:last-child {
+              .box {
+                  border-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/item_outline_4.png') 3 stretch !important;
+                  &.box-open{
+                    border-image: none !important;
+                  }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .foot-menu {
+    padding-top: 1.5rem;
+    >div {
+      display: inline-block;
+      width: 33.33%;
+      a {
+        img {
+          transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+        }
+        &:hover {
+          img {
+            transform: scale(0.85);
+          }
+        }
+      }
+    }
+    .btn_xephang {
+      text-align: left;
+      img {
+        width: 20rem;
+        @include device-1(){
+          width: 27rem;
+        }
+      }
+    }
+    .btn_doithe {
+      text-align: center;
+      img {
+        width: 30rem;
+      }
+    }
+    .btn_muahom {
+      text-align: right;
+      img {
+        width: 20rem;
+        @include device-1(){
+          width: 27rem;
+        }
+      }
+    }
+  }
+ 
+}
+marquee {
+  position: fixed;
+  top: 3.9rem;
+  width: 80rem;
+  left: 16rem;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9;
+  > span {
+    color: #fff;
+    font-size: 2.4rem;
+    display: inline-block;
+    width: 120rem;
+    white-space: nowrap;
+  }
+  &.mr-bot{
+    top: auto;
+    bottom: 3rem;
+  }
+}
+.buy-chest {
+  .current-diamond {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+      background-color: #3d0303;
+      border-radius: 6rem;
+      width: 27rem;
+      height: 7rem;
+      font-size: 5.2rem;
+      font-weight: 700;
+      padding-top: 0.2rem;
+    }
+    img {
+      width: 4rem;
+    }
+  }
+  .chest-body {
+    text-align: center;
+    margin-top: 8rem;
+    .chest-item {
+      width: 32rem;
+      display: inline-block;
+      margin: 0 4rem;
+      .btn-buy {
+        text-align: center;
+        display: block;
+        width: 26rem;
+        margin: 0 auto;
+        border-radius: 5px;
+        background-color: #5da842;
+        margin-bottom: 5.5rem;
+        span {
+          font-size: 3.2rem;
+          color: #fff;
+          display: block;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+        label {
+          font-weight: 300;
+          color: #336324;
+          font-size: 3rem;
+          display: inline-block;
+          margin: -1.5rem 0 0 0;
+        }
+      }
+      .chest-price {
+        text-align: center;
+        margin: 0;
+        span {
+          font-size: 6.3rem;
+          color: #fff;
+          font-weight: 700;
+        }
+        i {
+          display: inline-block;
+          transform: translate(0.3rem, -1.5rem);
+        }
+      }
+      .chest-img {
+        img {
+          width: 32rem;
+        }
+      }
+      &:nth-child(2) {
+        .btn-buy {
+          background-color: #3a89ad;
+          label {
+            color: #166082;
+          }
+        }
+      }
+    }
+  }
+}
+
+.exchange-result {
+  .gift-name {
+    margin: 0 0 5rem 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 5.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .gif-img {
+    width: 28.3rem;
+    height: 17.9rem;
+    margin: 0 auto;
+    @include device-1(){
+      width: 200px;
+      height: auto;
+    }
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+.duplicate-gift{
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  @include device-1(){
+    font-size: 18px;
+    margin: 15px 0;
+  }
+}
+.account-info{
+  .group-info{
+    display: table;
+    width: 100%;
+    margin-bottom: 2rem;
+    @include device-1(){
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    >div{
+      display: table-cell;
+      &.lbel{
+        width: 28rem;
+        color: #fff;
+        font-weight: 300;
+        @include device-1(){
+          width: 120px;
+        }
+      }
+      input{
+        height: 4rem;
+        background-color: #b93638;
+        border: 1px solid #fe6e70;
+        border-radius: 5px;
+        @include device-1(){
+          height: 34px;
+        }
+      }
+    }
+  }
+  .note-txt{
+    @include device-1(){
+      font-size: 14px;
+    }
+  }
+  .group-confirm{
+    a{
+      @include device-1(){
+        font-size: 14px;
+        margin: 0 15px;
+      }
+    }
+  }
+}

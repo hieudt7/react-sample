@@ -1,0 +1,242 @@
+header {
+  width: 94.3rem;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-family: 'UVNNhatKy';
+  font-weight: 700;
+  font-style: italic;
+  .logo {
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    img {
+      transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    }
+    @include device-1() {
+      display: none;
+    }
+  }
+  &.fixed-menu {
+    position: fixed !important;
+    left: 0;
+    @include desktop-1() {
+      top: -2.3rem;
+      ul {
+        &.menu {
+          li {
+            &.nav-logo {
+              .logo {
+                margin: 0;
+                img {
+                  width: 7.7rem;
+                  pointer-events: none;
+                  margin-top: -0.5rem;
+                }
+                a {
+                  display: block;
+                  padding: 0;
+                }
+              }
+            }
+            a {
+              padding-top: 3.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include device-1() {
+    width: 100%;
+    margin-top: 15px;
+    position: fixed;
+  }
+  nav {
+    position: relative;
+  }
+  @include desktop-1() {
+    .collapse {
+      display: block !important;
+    }
+  }
+  ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include clearfix();
+    @include device-1() {
+      display: block;
+      width: 100%;
+    }
+    &.user {
+      padding-right: 2.5rem;
+      margin-bottom: 1.5rem;
+      margin-top: 2.2rem;
+      @include device-1(){
+        padding: 0 15px;
+        margin: 0;
+        border-bottom: 1px solid #030753;
+      }
+      li {
+        float: right;
+        @include device-1() {
+          padding: 20px 0;
+          float: left;
+        }
+        a,
+        span {
+          color: #fff;
+          text-shadow: -1px 2px 4px rgba(3, 7, 76, 1);
+          @include device-1() {
+            font-size: 20px;
+            color: #030753;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+    &.menu {
+      position: relative;
+      z-index: 3;
+      border: 0;
+      padding: 0 2.3rem;
+      li {
+        display: inline-block;
+        padding: 0 1.5rem;
+        position: relative;
+        z-index: 2;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding: 0;
+        }
+        a {
+          font-size: 2rem;
+          color: #030753;
+          padding: 0;
+          text-transform: uppercase;
+          &.nav-link {
+            display: block;
+          }
+          @include device-1(){
+            font-size: 20px;
+          }
+        }
+        &.is-current,
+        &:hover {
+          i {
+            animation-iteration-count: infinite;
+          }
+        }
+        &.nav-logo {
+          padding: 0;
+          h1 {
+            margin-top: -2.2rem;
+            img {
+              width: 13rem;
+            }
+          }
+        }
+        &.social-link {
+          a {
+            margin-right: 0.5rem;
+            img {
+              width: 5.2rem;
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        @include device-1() {
+          display: block;
+          width: 100%;
+        }
+      }
+      @include desktop-1() {
+        height: 7.6rem;
+        background-image: url('/images/menu_bar.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      @include device-1() {
+        padding:0;
+        li {
+          border-bottom: 1px solid #17667f;
+          padding: 20px 0;
+          &:nth-child(5){
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  .moblie-nav {
+    display: none;
+    @include device-1() {
+      width: 399px;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      background-image: url('/images/menu_bar_mobile.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 73px;
+      padding: 0 22px;
+      li {
+        float: left;
+        padding-top: 15px;
+        margin: 0 15px;
+        img {
+          max-width: 100%;
+        }
+        &.mlogo {
+          margin: 0;
+          margin-top: -22px;
+        }
+        &.toogle-menu {
+          float: right;
+          width: 55px;
+        }
+        .menu-mobile {
+          width: 54px;
+          height: 46px;
+          span {
+            display: block;
+            height: 6px;
+            background-color: #030753;
+            &:nth-child(2) {
+              margin: 14px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include device-1() {
+  #navbarSupportedContent {
+    position: absolute;
+    width: 360px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 8px;
+    background-image: url('/images/bg-gradien.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 0 50px;
+    padding-bottom: 10px;
+    .nav-logo {
+      display: none;
+    }
+    .user {
+      padding: 0;
+    }
+  }
+}

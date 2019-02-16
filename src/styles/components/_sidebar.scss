@@ -1,0 +1,195 @@
+.side-bar {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: block;
+      width: 17.9rem;
+      height: 11.4rem;
+      background-image: url('/images/menu_box.png');
+      margin-bottom: 1px;
+      background-size: cover;
+      position: relative;
+      @include device-1(){
+        width: 15rem;
+        height: 10rem;
+      }
+      a {
+        display: block;
+        text-align: center;
+        padding-top: 3rem;
+        @include clearfix();
+      }
+      &:nth-child(1) {
+        i {
+          img {
+            width: 5.2rem;
+            @include device-1(){
+              width: 4.2rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 9.7rem;
+            @include device-1(){
+              width: 8.7rem;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        i {
+          img {
+            width: 5.9rem;
+            @include device-1(){
+              width: 4.9rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 11.3rem;
+            @include device-1(){
+              width: 8.3rem;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        i {
+          img {
+            width: 4.6rem;
+          }
+        }
+        span {
+          img {
+            width: 5.9rem;
+            @include device-1(){
+              width: 4.9rem;
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        i {
+          img {
+            width: 5.7rem;
+            @include device-1(){
+              width: 4.7rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 6.9rem;
+            @include device-1(){
+              width: 5.9rem;
+            }
+          }
+        }
+      }
+      &:nth-child(5) {
+        i {
+          img {
+            width: 5.5rem;
+            @include device-1(){
+              width: 4.5rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 10.4rem;
+            @include device-1(){
+              width: 9.4rem;
+            }
+          }
+        }
+      }
+      &:nth-child(6) {
+        i {
+          img {
+            width: 6.9rem;
+            @include device-1(){
+              width: 5.9rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 8.1rem;
+            @include device-1(){
+              width: 7.1rem;
+            }
+          }
+        }
+      }
+      &:nth-child(7) {
+        i {
+          img {
+            width: 6.2rem;
+            @include device-1(){
+              width: 5.2rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 7.3rem;
+            @include device-1(){
+              width: 6.3rem;
+            }
+          }
+        }
+      }
+      &:nth-child(8) {
+        i {
+          img {
+            width: 7rem;
+            @include device-1(){
+              width: 6rem;
+            }
+          }
+        }
+        span {
+          img {
+            width: 6.2rem;
+            @include device-1(){
+              width: 5.2rem;
+            }
+          }
+        }
+      }
+      &.celendar{
+        background-image: url('/images/menu_box_2.png');
+      }
+      &.disable{
+        background-image: url('/images/menu_box_2.png');
+        filter: grayscale(1);
+        pointer-events: none;
+      }
+      &.active{
+        width: 21.7rem;
+        background-image: url('/images/menu_box_3.png');
+        @include device-1(){
+          width: 18.5rem;
+        }
+      }
+      &.hot-menu{
+        &:after{
+          content: "";
+          position: absolute;
+          top: 1px;
+          right: 2px;
+          width: 4.6rem;
+          height: 4.1rem;
+          background-image: url('/images/lbl_hot.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

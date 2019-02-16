@@ -1,0 +1,525 @@
+.top-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  @include clearfix();
+  .img-top {
+    position: absolute;
+    width: 100%;
+  }
+  .user-group {
+    float: right;
+    position: relative;
+    z-index: 2;
+    margin-right: 9.2rem;
+    width: auto;
+    height: 3.2rem;
+    background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/user-bg.png');
+    background-repeat: repeat;
+    border-bottom: 2px solid #ff0000;
+    padding: 0 2rem;
+    @include device-1(){
+      height: 8.2rem;
+      padding-top: 0.7rem;
+    }
+    &::after,
+    &::before {
+      content: "";
+      width: 3.2rem;
+      height: 3.2rem;
+      position: absolute;
+      top: 0;
+      background-size: contain;
+      @include device-1(){
+        width: 8.2rem;
+        height: 8.2rem;
+      }
+    }
+    &::before {
+      background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/user-left.png');
+      left: -3.2rem;
+      @include device-1(){
+        left: -8rem;
+      }
+    }
+    &::after {
+      background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/user-right.png');
+      right: -3.2rem;
+      @include device-1(){
+        right: -8rem;
+      }
+    }
+    a {
+      font-size: 1.9rem;
+      color: #fff000;
+      line-height: 3rem;
+      @include device-1(){
+        font-size: 3rem;
+        height: 8.2rem;
+        display: block;
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}
+.home-page {
+  height: 100vh;
+  font-family: 'UTMFacebook';
+  font-weight: 300;
+  background-color: #370000;
+
+  .art {
+    position: relative;
+    img {
+      width: 192rem;
+    }
+  }
+  .foot-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10.2rem;
+    z-index: 12;
+    padding-top: 1rem;
+    animation-delay: 0.1s;
+    animation-duration: 1.1s;
+    @include clearfix();
+    .tbl-group {
+      display: table;
+      width: 100%;
+      .group-btn {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        .share {
+          padding-left: 22rem;
+        }
+      }
+      .countdown {
+        display: table-cell;
+        width: 42rem;
+        text-align: center;
+        vertical-align: middle;
+        >div {
+          display: inline-block;
+          padding-right: 2.5rem;
+          position: relative;
+          &::after {
+            content: ":";
+            position: absolute;
+            right: 0.6rem;
+            top: -1rem;
+            color: #fff;
+            font-size: 4.5rem;
+          }
+          &:last-child {
+            padding: 0;
+            &::after {
+              content: none;
+            }
+          }
+          >span {
+            display: block;
+            color: #fff;
+            font-size: 2rem;
+            text-transform: uppercase;
+            &:first-child {
+              width: 6.2rem;
+              height: 6.2rem;
+              background-color: #690101;
+              border: 1px solid #ff0000;
+              line-height: 5.2rem;
+              color: #ffdc37;
+              font-size: 4.6rem;
+            }
+            &:last-child {
+              margin-top: -0.5rem;
+            }
+          }
+        }
+      }
+    }
+    .red-story {
+      float: left;
+      margin-left: 5rem;
+      img {
+        width: 18.7rem;
+        transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+      }
+      &:hover {
+        img {
+          transform: scale(0.85);
+        }
+      }
+    }
+    .share {
+      img {
+        width: 32.4rem;
+        transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+      }
+      &:hover {
+        img {
+          transform: scale(0.85);
+        }
+      }
+    }
+  }
+  .menu-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 192rem;
+    z-index: 11;
+  }
+  .img-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 192rem;
+    z-index: 9;
+  }
+  .page-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 4.8rem;
+    z-index: 10;
+    text-align: center;
+    width: 137rem;
+    animation-delay: 0.3s;
+    animation-duration: 1.2s;
+    .group-flower {
+      position: relative;
+      width: 137rem;
+      height: 39.9rem;
+      margin: 0 auto;
+      .page-title-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 137rem;
+        height: 39.9rem;
+      }
+      .page-title-txt {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 112rem;
+        bottom: -2rem;
+      }
+      .page-title-logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 45.6rem;
+        bottom: 12rem;
+        z-index: 9;
+      }
+      img {
+        position: absolute;
+        z-index: 11;
+        &.f-1 {
+          width: 2.5rem;
+          bottom: 6rem;
+          left: 27.4rem;
+          animation-delay: 900ms;
+          animation-duration: 1s;
+        }
+        &.f-4 {
+          width: 6.8rem;
+          bottom: 10.5rem;
+          left: 26.8rem;
+          animation-delay: 1200ms;
+          animation-duration: 1s;
+        }
+        &.f-3 {
+          width: 4.2rem;
+          bottom: 6rem;
+          left: 32.8rem;
+          animation-delay: 1500ms;
+          animation-duration: 1s;
+        }
+        &.f-5 {
+          width: 5rem;
+          bottom: 5.7rem;
+          right: 32rem;
+          animation-delay: 1800ms;
+          animation-duration: 1s;
+        }
+        &.f-2 {
+          width: 2.7rem;
+          bottom: 13.7rem;
+          right: 27rem;
+          animation-delay: 2100ms;
+          animation-duration: 1s;
+        }
+      }
+      .clound-1 {
+        right: 47rem;
+        top: 2.4rem;
+        z-index: 10;
+        animation-name: cloundMove;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        width: 9.9rem;
+      }
+      .clound-2 {
+        left: 45rem;
+        top: 4rem;
+        z-index: 10;
+        animation-name: cloundMove;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        width: 11.3rem;
+      }
+      .clound-3 {
+        left: 42.5rem;
+        top: 10rem;
+        z-index: 10;
+        animation-name: cloundUp;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        width: 14.3rem;
+      }
+      .clound-4 {
+        width: 14.7rem;
+        right: 43.5rem;
+        top: 11.5rem;
+        z-index: 10;
+        animation-name: cloundUp;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+  .group-vid {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    @include device-1() {
+      margin-left: 5rem;
+    }
+    .video-btn {
+      position: relative;
+      text-align: center;
+      margin-top: -5rem;
+      margin-left: -5rem;
+      @include device-1() {
+        margin-left: 0;
+        margin-top: -7rem;
+      }
+      .video-src {
+        width: 10.5rem;
+        height: 10.5rem;
+        overflow: hidden;
+        -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #682602 100%);
+        -webkit-transform: rotate(0.000001deg);
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 2.4rem;
+        opacity: 0.8;
+        background-color: #370000;
+        @include device-1() {
+          width: 12.5rem;
+          height: 12.5rem;
+        }
+        video {
+          height: 140%;
+          margin-left: -60px;
+          overflow: hidden;
+          margin-top: -13px;
+          @include device-1() {
+            height: 100%;
+            margin-left: 0;
+            overflow: hidden;
+            margin-top: 0;
+          }
+        }
+      }
+      .video-play {
+        display: inline-block;
+        width: 15rem;
+        height: 15rem;
+        display: inline-block;
+        background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/play_nm.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: scale 2s ease infinite;
+        @include device-1() {
+          width: 17rem;
+          height: 17rem;
+        }
+      }
+    }
+  }
+  .light {
+    position: absolute;
+    z-index: 90;
+    bottom: 15rem;
+    right: -10rem;
+    animation-name: routate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    width: 15rem;
+  }
+  .logo-main {
+    position: relative;
+    top: 0;
+    left: auto;
+    right: auto;
+    width: 50rem;
+  }
+}
+
+@keyframes routate {
+  0% {
+    -webkit-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  50% {
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    opacity: .8;
+    background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/play_ef.png');
+  }
+  50% {
+    opacity: 1;
+    background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/play_nm.png');
+  }
+  100% {
+    opacity: .8;
+    background-image: url('https://cdn.vn.garenanow.com/web/ff/ff_new_year_2019/images/play_ef.png');
+  }
+}
+
+@keyframes cloundUp {
+  0% {
+    transform: translate(0, 4px)
+  }
+  50% {
+    transform: translate(0, -4px)
+  }
+  100% {
+    transform: translate(0, 4px)
+  }
+}
+
+@keyframes cloundMove {
+  0% {
+    transform: translate(5px, 0)
+  }
+  50% {
+    transform: translate(-5px, 0)
+  }
+  100% {
+    transform: translate(5px, 0)
+  }
+}
+
+@keyframes leafMove2 {
+  0% {
+    transform: translate(0px, 0px)
+  }
+  50% {
+    transform: translate(-10px, 10px)
+  }
+  100% {
+    transform: translate(0px, 0px)
+  }
+}
+
+@keyframes bouncing {
+  20%,
+  53%,
+  80%,
+  0%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+    animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+    -webkit-transform: translate3d(0, -6px, 0) scale3d(.95, 1.15, 1);
+    transform: translate3d(0, -6px, 0) scale3d(.95, 1.15, 1);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+    animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@include device-1-portrait() {
+  .modal-noti {
+    display: block;
+    .modal-dialog {
+      background-color: #420405;
+      border: 2px solid #f2c42b;
+      height: auto;
+      .pop-title {
+        font-size: 8rem !important;
+        color: #ffcf2d !important;
+        text-transform: uppercase !important;
+        margin: 0 0 15px !important;
+      }
+      .info-text {
+        color: #fff;
+        font-size: 6rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes clouds {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+    -moz-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+    transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+    -moz-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+    transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+  }
+}
+
+.logo-home {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 17.8rem;
+}

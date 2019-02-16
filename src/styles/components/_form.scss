@@ -1,0 +1,121 @@
+input,
+textarea,
+button {
+    -webkit-appearance:none;
+    outline: none;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="date"],
+input[type="datalist"],
+input[type="time"],
+textarea {
+  border: 0;
+  border-radius: 8px;
+  font-size: 3.6rem;
+  height: 65px;
+  color: #fe71a5;
+  outline: none !important;
+  width: 100%;
+  padding: 5px 10px;
+  background: #ffd2e2;
+  .section-purple & {
+    background-color: #ddcfff;
+    color: $purple;
+  }
+  .section-aqua & {
+    background-color: #ede6fd;
+    color: #14a0e4;
+  }
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #22221e;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: #22221e;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: #22221e;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: #22221e;
+  }
+}
+.wrap-form {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form-line {
+  margin-bottom: 20px;
+  .section-purple & {
+    label {
+      color: #ddcfff;
+    }
+  }
+  .section-aqua & {
+    label {
+      color: #304087;
+    }
+  }
+  label {
+    color: #ffd2e2;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+  button {
+    max-width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+select {
+  border: 0;
+  border-radius: 8px;
+  font-size: 3.6rem;
+  height: 65px;
+  color: #fe71a5;
+  outline: none !important;
+  width: 100%;
+  padding: 5px 10px;
+  background: #ffd2e2;
+  font-weight: bold;
+  .section-purple & {
+    background-color: #ddcfff;
+    color: $purple;
+  }
+  .section-aqua & {
+    background-color: #ede6fd;
+    color: #14a0e4;
+  }
+}
+textarea {
+  height: 200px;
+  min-height: 200px;
+  .section-purple & {
+    background-color: #ddcfff;
+    color: $purple;
+  }
+  .section-aqua & {
+    background-color: #ede6fd;
+    color: #14a0e4;
+  }
+}
+button {
+  outline: none !important;
+  background: transparent;
+  border: 0;
+}
