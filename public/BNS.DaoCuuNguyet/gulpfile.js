@@ -59,12 +59,11 @@ gulp.task('scripts', function () {
         'app/scripts/src/jquery.actual.js',
         'app/scripts/src/jquery.carouFredSel-6.0.4-packed.js',
         'app/scripts/src/jquery.scrollbar.min.js',
-        'app/scripts/src/timer.js',
         'app/scripts/src/wow.min.js',
         'app/scripts/src/velocity.min.js',
         'app/scripts/src/jquery.parallax.js',
-        // 'app/scripts/src/parallax.js',
-        // 'app/scripts/src/jquery.scrollify.js',
+        'app/scripts/src/parallax.js',
+        'app/scripts/src/aos.js',
         'app/scripts/src/script.js'
     ])
     //prevent pipe breaking caused by errors from gulp plugins
@@ -88,12 +87,11 @@ gulp.task('scripts-deploy', function () {
         'app/scripts/src/jquery.actual.js',
         'app/scripts/src/jquery.carouFredSel-6.0.4-packed.js',
         'app/scripts/src/jquery.scrollbar.min.js',
-        'app/scripts/src/timer.js',
         'app/scripts/src/wow.min.js',
         'app/scripts/src/velocity.min.js',
         'app/scripts/src/jquery.parallax.js',
-        // 'app/scripts/src/parallax.js',
-        // 'app/scripts/src/jquery.scrollify.js',
+        'app/scripts/src/parallax.js',
+        'app/scripts/src/aos.js',
         'app/scripts/src/script.js'
     ])
     //prevent pipe breaking caused by errors from gulp plugins

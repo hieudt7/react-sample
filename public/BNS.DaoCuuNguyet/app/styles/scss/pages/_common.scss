@@ -30,7 +30,9 @@ section {
   width: 100%;
   height: 100vh;
   display: none;
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #070c4c;
   &.animate-in {
     display: block;
   }
@@ -43,71 +45,4 @@ section {
 
 .container {
   overflow: hidden;
-}
-
-.menu-left {
-  font-size: 2rem;
-  list-style: none;
-  position: absolute;
-  top: 50%;
-  left: 10rem;
-  transform: translate(0, -50%);
-  z-index: 99;
-
-  li {
-    margin-bottom: 0.5rem;
-
-    .index {
-      display: inline-block;
-      width: 4.6rem;
-      height: 4.6rem;
-      background: url(../images/ico-index.png) no-repeat;
-      background-size: contain;
-      background-position: center;
-      line-height: 4.6rem;
-      font-weight: 700;
-      text-align: center;
-      margin-right: 2rem;
-    }
-
-    a {
-      text-transform: uppercase;
-      color: #fff;
-      h3{
-        margin: 0;
-        color: #fff;
-        display: inline-block;
-        font-weight: 400;
-      }
-    }
-
-    &.disable {
-      a,h3 {
-        color: #686868;
-        cursor: default;
-      }
-
-      .index {
-        background-image: url(../images/ico-index-dis.png);
-        color: #1d1d1d;
-      }
-      &:hover{
-        a,h3 {
-          color: #686868;
-          cursor: default;
-        }
-      }
-    }
-
-    &.active-menu,
-    &:hover {
-      a {
-        color: #ffee82;
-      }
-      h3{
-        color: #ffee82;
-      }
-    }
-  }
-
 }

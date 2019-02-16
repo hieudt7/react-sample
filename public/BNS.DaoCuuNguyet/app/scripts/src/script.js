@@ -41,8 +41,8 @@ function animation() {
         translateY: [0, "10px"],
         translateX: ["-50%", "-50%"]
     }, {
-        loop: true
-    }).velocity("reverse");
+            loop: true
+        }).velocity("reverse");
 
     $('body').on('click', '.mouse-scroll', function () {
         $('.section-2').first().velocity("scroll", {
@@ -206,21 +206,15 @@ function playvideo() {
     })
 }
 $(document).ready(function () {
-    if ($('.bg-parallax').length) {
-        // $('.bg-parallax').mousemove(function(event) { 
-        //    console.log(event.pageX)
-        //    console.log($(this).offset().left)
-        //    $('.bg-parallax').css('background-position',)
-        //     //console.log (left, top);
-        // });
+    if ($('.parallax-scene').length) {
+        $('.parallax-scene').parallax();
     }
+    AOS.init({
+    });
     resize();
     // cowndow();
-    timerCountdown();
     paegScroll();
-    flame();
     //  danceMenu();
-    playvideo();
     $(window).resize(function () {
         resize();
     });
