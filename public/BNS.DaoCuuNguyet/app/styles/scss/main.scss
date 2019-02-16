@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+/// Configuration and helpers
+@import 'utils/variables',
+'utils/functions',
+'utils/mixins',
+'utils/helpers';
+/// Vendors
+@import 'vendor/mq',
+'vendor/media-queries', //reset
+'vendor/normalize', //reset
+'vendor/jquery-ui-structure', //jquery ui - standards
+'vendor/_jquery-countdown-timer',
+'vendor/jquery-ui-theme',
+'vendor/nice-select';
+//jquery ui rolled theme for CMS
+/// Base
+@import 'base/base',
+'base/fonts',
+'base/typography';
+///// Layout
+@import 'layout/aos';
+@import 'layout/hover-min';
+@import 'layout/animation';
+@import 'layout/animate';
+@import'layout/header';
+@import'layout/footer';
+@import 'layout/scrollbar';
+/// Components
+@import 'components/flame-animation';
+/// Page-specific
+@import 'pages/common';
+@import 'pages/home/count-down';
+@import 'pages/home/video';
+

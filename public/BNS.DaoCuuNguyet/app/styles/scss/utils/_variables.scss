@@ -1,0 +1,69 @@
+/// Variables
+/// @see https://www.smashingmagazine.com/2016/01/variables-in-css-architecture/
+
+/// Grid
+/// Using rem-units to scale for accessibility (based on the user's browser settings, default 1rem equals 16px)
+/// @see layout/grid
+/// grid class specified below ($breakpoints)
+$grid-max-width:  120rem;
+$grid-gutter:     1rem;
+$grid-columns:    12;
+$grid-show-outlines: false; //to show the grid's outlines
+
+/// Breakpoints - used by the grid and media query manager
+/// @type Map
+/// @prop {size}: [min-width] - breakpoint name and minimum width for media queries
+$breakpoints: (
+  'xs': 0,
+  'sm': 420px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1200px
+);
+
+/// mq() - media query manager
+/// @see vendor/mq
+/// @link https://github.com/sass-mq/sass-mq
+$mq-breakpoints: $breakpoints;
+$mq-base-font-size: 16px;
+$mq-show-breakpoints: ();
+
+
+/// Fonts
+/// @TODO: choose color variable naming convention
+$roboto:  'Roboto', sans-serif;
+
+$font-size: 1.6rem;
+$font-primary:    $roboto;
+
+/// Colors
+$blue:  #011826;
+$blue-light: #0b2637;
+$link: #009fff;
+$yellow: #f8d45d;
+
+$white:         #fff;
+$gray-light:    #e5e5e5;
+$gray:          #999;
+$gray-dark:     #333;
+$black:         #000;
+
+$color-default: #8aa5b5; //default text color
+
+$color-primary:       $blue;
+$color-primary-light: $blue-light;
+
+$color-secondary:       $yellow;
+
+$color-success: green;
+$color-warning: orange;
+$color-alert:   red;
+
+
+/// Form
+$form-height:   40px;
+
+
+/// Dimensions - Widths and heights
+$height-header: 100px;  //example!
+$height-footer: 100px;  //example!

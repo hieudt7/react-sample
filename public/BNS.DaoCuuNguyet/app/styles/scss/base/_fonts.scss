@@ -1,0 +1,41 @@
+@import "fa/variables";
+
+@font-face {
+    font-family: 'UTM Bebas';
+    src: url('../fonts/UTMBebas.woff2') format('woff2'),
+    url('../fonts/UTMBebas.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf')  format('truetype'), url('../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg');
+    font-weight: 400;
+  }
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeue-Bold.woff') format('woff'), url('../fonts/HelveticaNeue-Bold.ttf')  format('truetype'), url('../fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue-CondensedBlack.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeue-CondensedBlack.woff') format('woff'), url('../fonts/HelveticaNeue-CondensedBlack.ttf')  format('truetype'), url('../fonts/HelveticaNeue-CondensedBlack.svg#HelveticaNeue-CondensedBlack') format('svg');
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeue-Light.woff') format('woff'), url('../fonts/HelveticaNeue-Light.ttf')  format('truetype'), url('../fonts/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+    font-weight: 300;
+  }
+  
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeue-Medium.woff') format('woff'), url('../fonts/HelveticaNeue-Medium.ttf')  format('truetype'), url('../fonts/HelveticaNeue-Medium.svg#HelveticaNeue-Medium') format('svg');
+    font-weight: 500;
+  }
+    
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
